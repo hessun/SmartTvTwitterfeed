@@ -10,13 +10,141 @@ body
 {
 	width: 960px;
 	height: 540px;
-	background-color: #fff;
+	background: #212121;
+	color: #FAFAFA;
 }
 
-#twitterFeed {
-    background-color:#eeeeee;
-    width:300px;
-    height:540px;
-    float:right;
-    padding:5px; 
+#wrapper {
+	float: right;
+	width: 250px;
+	min-height: 530px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0.1);
+	border-radius: 12px;
 }
+
+#search-block {
+
+}
+
+#result {
+
+}
+
+#searchInput {
+	margin: 1em auto;
+	width: 58%;
+	height: 2em;
+	text-align: center:
+}
+
+#searchButton {
+	margin: 0 auto;
+	width: 38%;
+	height: 2.5em;
+	background: #009DFF;
+	color: #FAFAFA;
+	border: none;
+	border-radius: 0.2em;
+}
+
+hr {
+	height: 1px;
+	border: 0;
+	background: #737373;
+	background: -moz-linear-gradient(left,  rgba(115,115,115,0) 0%, rgba(115,115,115,1) 20%, rgba(115,115,115,1) 80%, rgba(115,115,115,0) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(115,115,115,0)), color-stop(20%,rgba(115,115,115,1)), color-stop(80%,rgba(115,115,115,1)), color-stop(100%,rgba(115,115,115,0)));
+	background: -webkit-linear-gradient(left,  rgba(115,115,115,0) 0%,rgba(115,115,115,1) 20%,rgba(115,115,115,1) 80%,rgba(115,115,115,0) 100%);
+	background: -o-linear-gradient(left,  rgba(115,115,115,0) 0%,rgba(115,115,115,1) 20%,rgba(115,115,115,1) 80%,rgba(115,115,115,0) 100%);
+	background: -ms-linear-gradient(left,  rgba(115,115,115,0) 0%,rgba(115,115,115,1) 20%,rgba(115,115,115,1) 80%,rgba(115,115,115,0) 100%);
+	background: linear-gradient(to right,  rgba(115,115,115,0) 0%,rgba(115,115,115,1) 20%,rgba(115,115,115,1) 80%,rgba(115,115,115,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00737373', endColorstr='#00737373',GradientType=1 );
+}
+
+#twitter-user-img {
+	border-radius: 6px;
+	margin:  10px 20px 10px 0;
+}
+
+
+/* Tweet divs */
+#tweet-container {
+	
+}
+
+#tweet-profile-img	{
+	display: block;
+	float: left;
+}
+
+#tweet-info	{
+	display: block;
+	float: left;
+}
+
+#tweet-content {
+	clear: both;
+}
+
+@media (max-width: 390px) {
+
+	#wrapper {
+		width: 96%;
+	}
+
+	#search-block {
+		margin: 0.8em auto 2em auto;
+		text-align: center;
+	}
+	
+	#result {
+
+	}
+	
+	#searchInput {
+		margin: 1em auto;
+		width: 70%;
+		height: 2em;
+		text-align: center:
+	}
+
+	#searchButton {
+		margin: 0 auto;
+		width: 72%;
+		height: 2.8em;
+		background: #009DFF;
+		color: #FAFAFA;
+		border: none;
+		border-radius: 0.2em;
+	}
+	
+}
+
+/* Text Styles */
+
+#tweet-user, #tweet-text {
+	font-family: 'Roboto', sans-serif;
+}
+
+#tweet-user {
+
+}
+
+#tweet-time {
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 0.9em;
+	line-height: 0;
+	margin-top: -0.6em;
+	color: #009DFF;
+}
+
+#tweet-text {
+	font-size: 1em;
+}
+
+h1, h2, h3 {
+	font-family: 'Roboto', sans-serif;
+}
+
+

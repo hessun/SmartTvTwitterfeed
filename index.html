@@ -14,11 +14,13 @@
 		
 		<!-- TODO : Style sheets code -->
 		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
-
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet' type='text/css'>
 		<!-- TODO: Plugins -->
 		
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="app/javascript/t2.js"></script>
+		
 		
 	</head>
 
@@ -28,18 +30,24 @@
 		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
 
 		<!-- TODO: your code here -->
-		<div id="twitterFeed">
+		
+			<div id="wrapper" >
+		<div id="search-block">
+			<h2 >Enter a hasthag and press search</h2>
 			<form id="searchForm" method="" >
 				<input id="searchInput" placeholder="Search..."/>
-				<input id="twitterButton" type="submit" value="Search"  >
+				<input id="searchButton" type="submit" value="Search"  >
 			</form>
-			<ul id="result">
-		
-			</ul>
-		
 		</div>
 		
+		<hr>
+	
+		<div id="result">
 		
+		</div>
+	</div>
+
+	<script src="t2.js"></script>
 		
 	
 	</body>

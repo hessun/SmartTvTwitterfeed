@@ -1,4 +1,9 @@
 // API DOCUMENTATION: https://dev.twitter.com/docs/api/1.1
+$(document).ready(function() {
+     $("#searchForm").submit(function(e){
+         e.preventDefault();
+     });
+});
 
 var result = $('#result');
 
@@ -10,22 +15,29 @@ $('#searchForm').submit(function () {
 function showTweets(data) {
 			console.log(data);
 			result.empty();
-
 			data.statuses.forEach(function (status) {
 				
-				var tweetUser = $('<h3>').appendTo(result);
-				var tweetTime = $('<p>').appendTo(result);
-				var tweetText = $('<p>').appendTo(result);
+				
+				var tweetContainer = $('<div id="tweet-container">').appendTo(result);
+				var tweetProfileImg = $('<div id="tweet-profile-img">').appendTo(tweetContainer);
+				var tweetInfo = $('<div id="tweet-info">').appendTo(tweetContainer);
+				var tweetContent = $('<div id="tweet-content">').appendTo(tweetContainer);
+				// Lets create variables for fetched information and define where to append it
+				//var tweetUserProfileImageUrl = ;
+				var tweetUserProfileImageUrl = status.user.profile_image_url_https;
+				var tweetUserProfileImage = $('<img id="twitter-user-img" src=' + tweetUserProfileImageUrl + '>').appendTo(tweetProfileImg);
+				
+				var tweetUser = $('<h3 id="tweet-user">').appendTo(tweetInfo);
+				var tweetTime = $('<p id="tweet-time">').appendTo(tweetInfo);
+				var tweetText = $('<p id="tweet-text">').appendTo(tweetContent);
 				tweetUser.append(status.user.name);
 				tweetTime.append(status.created_at);
-				tweetText.append( status.text);
+				tweetText.append(status.text);
 				$( "<hr>" ).appendTo( result );
-				
+
+				//console.log(tweetUserProfileImageUrl);
 			});
 		}
-
-
-
 
 function searchTweets(query) {
 	/*
@@ -49,9 +61,7 @@ function searchTweets(query) {
 }
 
 
-//Tässä intervalli funktio haulle 5 sek välein
-//window.setInterval(function(){
-//	searchTweets($('#searchInput').val());
-//}, 5000); 
-
-//users.metropolia.fi/~ollial/verkkopalvelut/k2015/twitter/twitter.js Esimerkki pöllitty
+// Tässä intervalli funktio haulle 5 sek välein
+window.setInterval(function(){
+searchTweets($('#searchInput').val());
+}, 5000); 
